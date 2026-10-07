@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NivasanPortfolio</title>
+  <link rel="icon" href="assets/briefcase.png" />
+  <meta name="description" content="Personal portfolio" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="loader" id="loader">
+    <div class="loader__name" data-site="name"></div>
+    <div class="loader__count"><span id="loaderCount">0</span>%</div>
+  </div>
+
+  <div class="grain"></div>
+  <div class="cursor" id="cursor"></div>
+
+  <nav class="dock" id="dock">
+    <a href="#home"    data-section="home">Home</a>
+    <a href="#about"   data-section="about">About</a>
+    <a href="#work"    data-section="work">Work</a>
+    <a href="#contact" data-section="contact" class="dock__cta">Let's talk</a>
+  </nav>
+
+  <main>
+
+    <section class="hero" id="home">
+      <p class="hero__role"  data-site="role"></p>
+      <p class="hero__year"  data-site="year"></p>
+
+      <h1 class="hero__title" aria-label="Portfolio">
+        <span class="split">PORTF</span><span class="face" id="face"></span><span class="split">LIO</span>
+      </h1>
+
+      <p class="hero__scroll">Scroll ↓</p>
+      <p class="hero__loc" data-site="location"></p>
+    </section>
+
+
+    <section class="about" id="about">
+      <div class="about__figure">
+        <div class="figure" id="body"></div>
+        <div class="figure__shadow"></div>
+        <span class="figure__tag">that's me ↗</span>
+      </div>
+
+      <div class="about__content">
+        <h2 class="big split">HELLO</h2>
+
+        <div class="about__grid">
+          <div class="about__text">
+            <p class="about__hi">Hi, <span id="aboutHi"></span> <b data-site="name"></b></p>
+            <div id="aboutParas"></div>
+          </div>
+
+          <div class="about__side">
+            <h3 class="label">SKILLS</h3>
+            <div class="skills" id="skills"></div>
+
+            <h3 class="label">EXPERIENCE</h3>
+            <ul class="timeline" id="experience"></ul>
+
+            <h3 class="label">EDUCATION</h3>
+            <ul class="timeline" id="education"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="torn" id="torn">
+      <svg class="tear tear--rim"  viewBox="0 0 1440 90" preserveAspectRatio="none" data-seed="7"></svg>
+      <svg class="tear tear--dark" viewBox="0 0 1440 90" preserveAspectRatio="none" data-seed="3"></svg>
+
+      <div class="torn__stage">
+        <div class="torn__row torn__row--a" id="rowA"></div>
+        <div class="torn__row torn__row--b" id="rowB"></div>
+        <div class="torn__head" id="head"></div>
+      </div>
+    </section>
+
+    <section class="work" id="work">
+      <div class="work__head">
+        <h2 class="big split" id="projectsTitle"></h2>
+        <p class="work__note" id="projectsNote"></p>
+      </div>
+      <div class="polaroids" id="polaroids"></div>
+    </section>
+
+    <section class="contact" id="contact">
+      <svg class="tear tear--rim"  viewBox="0 0 1440 90" preserveAspectRatio="none" data-seed="11"></svg>
+      <svg class="tear tear--dark" viewBox="0 0 1440 90" preserveAspectRatio="none" data-seed="5"></svg>
+
+      <p class="contact__sub"><b data-site="name"></b> <span id="contactText"></span></p>
+
+      <a class="contact__big" id="contactBig" href="#" data-magnet>
+        <span class="line"><span class="line__in">LET'S CONNECT</span></span>
+        <span class="contact__arrow">→</span>
+      </a>
+
+      <div class="contact__links" id="socials"></div>
+
+      <p class="contact__sign" data-site="name"></p>
+
+      <footer class="contact__foot">
+        <span>© <span id="yearNow"></span> <span data-site="name"></span></span>
+        <span>Designed &amp; coded with care</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="js/lib/gsap.min.js"></script>
+  <script src="js/lib/ScrollTrigger.min.js"></script>
+  <script src="js/lib/Draggable.min.js"></script>
+
+  <script src="js/icons.js"></script>
+  <script src="js/content.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
